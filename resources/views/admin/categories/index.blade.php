@@ -2,7 +2,7 @@
 
 
 @section('content')
-
+<div class="card-body">
 <table class="table table-hover">
 	<thead>
 		<th>Category Name</th>
@@ -23,5 +23,5 @@
 
 	</tbody>
 </table>
-
+</div>
 @stop
