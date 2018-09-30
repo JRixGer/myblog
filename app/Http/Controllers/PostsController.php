@@ -51,7 +51,7 @@ class PostsController extends Controller
             'featured'=> 'uploads/posts/'.$featured_new_name,
             'content'=>$request->content,
             'category_id'=>$request->category_id
-        ])
+        ]);
 
         Session::flash('success','Post created successfully');
 
