@@ -23,6 +23,21 @@
     			<input type="file" name="featured" class="form-control">
     		</div>
 
+
+            <div class="form-group">
+                <label for="category"> Select Category </label>
+                <select name = "category_id">
+                   @foreach($categories as $category)
+                      <option>{{ $category->name }}</option>
+                   @endforeach 
+                </select>
+
+
+            </div>
+
+            ->with('categories', Category::all());
+
+
     		<div class="form-group">
     			<label for="content"> Content </label>
     			<textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
