@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class PostsController extends Controller
 {
@@ -44,6 +45,15 @@ class PostsController extends Controller
             'category_id'=>'required'
         ]
         );
+
+        $post = post::create([
+            'title'=>$request->title,
+            'featured'=> 'uploads/posts/'.$featured_new_name,
+            'content'=>$request->content,
+            'category_id'=>$request->category_id
+        ])
+
+        Session::flash('success','Post created successfully');
 
     }
 
