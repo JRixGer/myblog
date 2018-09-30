@@ -46,7 +46,7 @@ class PostsController extends Controller
         ]
         );
 
-        $post = post::create([
+        $post = Post::create([
             'title'=>$request->title,
             'featured'=> 'uploads/posts/'.$featured_new_name,
             'content'=>$request->content,
