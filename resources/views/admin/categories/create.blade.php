@@ -2,7 +2,7 @@
 
 @section('content')
 
-#include('admin.includes.errors')
+@include('admin.includes.errors')
 
 
 <div class="card">
