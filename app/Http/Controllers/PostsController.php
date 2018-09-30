@@ -40,7 +40,7 @@ class PostsController extends Controller
         $this->validate($request, [
             'title'=>'required',
             'featured'=>'required|image',
-            'content'=>'required'
+            'content'=>'required',
             'category_id'=>'required'
         ]
         );
