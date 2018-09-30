@@ -11,10 +11,10 @@
 	</thead>
 	<tbody>
 		
-		@forach($categories as $category)
+		@foreach($categories as $category)
 		<tr>
 			<td>
-				{{ $category->name}}
+				{{ $category->name }}
 			</td>
 		</tr>
 		@endforeach
