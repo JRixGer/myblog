@@ -21,13 +21,6 @@
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet" />
     
-    <script>
-        
-        @if(Session::has('success'))
-            toastr.success("{{ Session::get('success')}}")
-        @endif
-
-    </script>
 
 </head>
 <body>
@@ -127,4 +120,12 @@
 
     </div>
 </body>
+    <script>
+        
+        @if(Session::has('success'))
+            toastr.success("{{ Session::get('success')}}")
+        @endif
+
+    </script>
+
 </html>
