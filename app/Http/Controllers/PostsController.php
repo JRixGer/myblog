@@ -30,7 +30,7 @@ class PostsController extends Controller
         if($categories->count() == 0)
         {
             Session::flash('info','You must have some category before attempting to create some post.');
-            return redirect->back();
+            return redirect()->back();
         }
         return view('admin.posts.create')->with('categories', Category::all());
     }
