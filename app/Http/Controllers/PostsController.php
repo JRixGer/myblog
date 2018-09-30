@@ -46,6 +46,8 @@ class PostsController extends Controller
         ]
         );
 
+        $featured_new_name = time().$featured->getClientOriginalName();
+        
         $post = Post::create([
             'title'=>$request->title,
             'featured'=> 'uploads/posts/'.$featured_new_name,
