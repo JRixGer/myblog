@@ -99,14 +99,14 @@
                         </li>
                     </ul>
                 </div>
-                
-                @endif
-
-
-
                 <div class="col-lg-8">
+                @else
+                <div class="col-lg-12">
+                @endif
                     @yield('content')
                 </div>
+
+
             </div>
             
         </div>
