@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -48,6 +49,7 @@ class PostsController extends Controller
 
         $featured = $request->featured;
         $featured_new_name = time().$featured->getClientOriginalName();
+        $featured->move('uploads/posts', $featured_new_name );
         
         $post = Post::create([
             'title'=>$request->title,
