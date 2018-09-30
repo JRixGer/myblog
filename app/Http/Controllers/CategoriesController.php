@@ -43,7 +43,8 @@ class CategoriesController extends Controller
         $category = new Category;
         $category->name = $request->name;
         $category->save();
-        return redirect()->back();
+        // return redirect()->back();
+        return redirect()->route('categories');
         
     }
 
