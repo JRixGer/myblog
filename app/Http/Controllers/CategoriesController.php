@@ -81,7 +81,7 @@ class CategoriesController extends Controller
     public function update(Request $request, $id)
     {
         $category = Category::find($id);
-        $category-> = $request->name; 
+        $category->name = $request->name; 
         $category->save();
         return redirect()->route('categories');
 
